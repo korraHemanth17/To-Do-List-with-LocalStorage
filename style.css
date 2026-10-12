@@ -1,0 +1,166 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f6fb;
+  color: #172746;
+  font-family: Arial, sans-serif;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 650px;
+  padding: 32px;
+  background: white;
+  border: 1px solid #e1e8f2;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px #203a5b12;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+header p {
+  color: #71809a;
+}
+
+#task-form {
+  display: flex;
+  gap: 10px;
+}
+
+#task-input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 13px 18px;
+  background: #4169f5;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3154d8;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #91b4ff;
+  outline-offset: 3px;
+}
+
+#task-count {
+  color: #71809a;
+  font-size: 0.9rem;
+  margin-top: 22px;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 8px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.task-item input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  accent-color: #4169f5;
+  cursor: pointer;
+}
+
+.task-text {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #8a95a8;
+}
+
+.delete-btn {
+  padding: 8px 10px;
+  background: #fff0f0;
+  color: #d52e43;
+}
+
+.delete-btn:hover {
+  background: #ffe0e0;
+}
+
+.empty-message {
+  color: #8994a6;
+  text-align: center;
+  padding: 22px 0;
+}
+
+.footer {
+  border-top: 1px solid #edf0f5;
+  padding-top: 20px;
+  margin-top: 24px;
+  text-align: center;
+  color: #71809a;
+  font-size: 0.9rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 480px) {
+  .todo-container {
+    padding: 20px 16px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  #task-form {
+    flex-direction: column;
+  }
+
+  #task-form button {
+    width: 100%;
+  }
+}
